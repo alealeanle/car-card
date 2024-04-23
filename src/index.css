@@ -1,0 +1,32 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+	@font-face {
+		font-family: Gilroy;
+		font-display: swap;
+		src: url("./assets/fonts/Gilroy-Bold.woff2") format("woff2");
+		font-weight: 700;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: Gilroy;
+		font-display: swap;
+		src: url("./assets/fonts/Gilroy-Medium.woff2") format("woff2");
+		font-weight: 500;
+		font-style: normal;
+	}
+}
+
+body {
+  margin: 0;
+  font-family: Gilroy;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

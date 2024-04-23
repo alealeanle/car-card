@@ -1,0 +1,59 @@
+.carCard {
+	@apply
+		transition-transform
+		hover:scale-105
+		flex
+		flex-col
+		max-w-sm
+		mx-8
+		my-1
+		rounded-20px
+		shadow-[28px_28px_50px_0px_rgba(13,39,80,0.16)]
+		overflow-hidden;
+		&__imageWrap{
+			@apply p-4
+		}
+		&__image{
+			@apply
+				max-w-full
+				rounded-large 
+		}
+		&__body{
+		}
+		&__text{
+			@apply
+				px-6
+				py-2
+		}
+		&__title{
+			@apply
+				text-black
+				text-xl
+				font-bold
+				mb-1
+		}
+		&__description{
+		}
+		&__btnWrap{
+			@apply
+				flex
+				justify-end
+				px-6
+				py-4
+		}
+		&__btn{
+			@apply
+				bg-my-yellow
+				text-black
+				py-1
+				px-12
+				rounded-lg
+		}
+}
+
+
+
+
+
+
+

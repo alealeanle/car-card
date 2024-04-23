@@ -1,0 +1,909 @@
+.modal{
+	@apply
+		fixed
+		top-0
+		left-0
+		z-40
+		flex
+		justify-center
+		bg-modalBg
+		w-full
+		h-full
+		overflow-auto
+}
+.btnBackWrap{
+	@apply
+		before:absolute
+		before:top-0
+		before:h-full
+		before:w-[30px]
+		before:left-0
+		before:bg-my-yellow;
+		@screen md {
+			@apply
+				before:w-[50px]
+		}
+		@screen wrap {
+			@apply
+				before:w-[70px]
+		}
+}
+.btnBackCont{
+	@apply
+		absolute
+		flex
+		justify-center
+		items-center
+		top-[50px]
+		left-[5px]
+		bg-my-yellow
+		rounded-circle
+		w-[45px]
+		h-[45px];
+		@screen md {
+			@apply
+				w-[72px]
+				h-[72px]
+				left-[15px]
+		}
+		@screen wrap {
+			@apply
+				w-[109px]
+				h-[109px]
+				top-[67px]
+				left-[15px]
+		}
+}
+.btnBackImg{
+	@apply
+		w-[90%]
+		h-[90%]
+		ml-[1px];
+		@screen md {
+			@apply
+				w-[85%]
+				h-[85%]
+				ml-1
+		}
+		@screen wrap {
+			@apply
+				w-[100%]
+				h-[100%]
+	}
+}
+
+/////////////////////////////////////////////////////
+
+.carInfo{
+	@apply
+		mr-[10px]
+		ml-[60px]
+		max-w-[30%];
+		@screen s {
+			@apply
+				mr-[20px]
+				ml-[120px]
+				w-[50%]
+		}
+		@screen wrap {
+			@apply
+				mr-[30px]
+		}
+		@screen lg {
+			@apply
+				mr-[40px]
+		}
+		@screen xl {
+			@apply
+				ml-[142px]
+				mr-[70px]
+				max-w-[402px]
+		}
+}
+.carData{
+	@apply
+		bg-white
+		mt-1
+		mb-[5px]
+		pt-1
+		px-2
+		rounded-[12px]
+		shadow-[28px_28px_50px_0px_rgba(13,39,80,0.16)];
+		@screen s {
+			@apply
+				mt-2
+				pt-2
+				mb-[8px]
+				px-4
+				rounded-[20px]
+		}
+		@screen lg {
+			@apply
+				mt-[18px]
+				mb-[12px]
+				px-6
+				rounded-[24px]
+		}
+		@screen xl {
+			@apply
+				mt-3
+				mb-[17px]
+				pt-10
+				px-5
+				rounded-[26px]
+		}
+}
+.carData__title{
+	@apply
+		mb-[4px]
+		text-[10px]
+		text-center
+		font-bold;
+		@screen s {
+			@apply
+				text-[14px]
+				mb-[8px]
+		}
+		@screen wrap {
+			@apply
+				text-[16px]
+				mb-[8px]
+		}
+		@screen lg {
+			@apply
+				text-[20px]
+				mb-[20px]
+		}
+		@screen xl {
+			@apply
+				text-[24px]
+				leading-[29px]
+				mb-[80px]
+		}
+}
+.carData__items{
+	@apply
+		flex
+		flex-col
+}
+.carData__item{
+	@apply
+		relative
+		[&:not(:last-child)]:before:absolute
+		[&:not(:last-child)]:before:bottom-0
+		[&:not(:last-child)]:before:left-0
+		[&:not(:last-child)]:before:w-full
+		[&:not(:last-child)]:before:h-[1px]
+		[&:not(:last-child)]:before:bg-[#000000]
+		[&:not(:last-child)]:before:bg-opacity-[.35]
+		flex
+		justify-between
+		text-[8px]
+		pb-[8px];
+		@screen s {
+			@apply
+				[&:not(:last-child)]:before:bottom-2
+				text-[12px]
+				pb-[10px]
+		}
+		@screen wrap {
+			@apply
+				[&:not(:last-child)]:before:bottom-4
+				text-[14px]
+				pb-[18px]
+		}
+		@screen lg {
+			@apply
+				text-[16px]
+				pb-[22px]
+		}
+	@screen xl {
+		@apply
+			[&:not(:last-child)]:before:bottom-6
+			text-[20px]
+			leading-6
+			pb-[32px]
+	}
+}
+
+//////////////////////////////////////////////////////
+
+.carPrice{
+	@apply
+		bg-white
+		rounded-[12px]
+		shadow-[28px_28px_50px_0px_rgba(13,39,80,0.16)]
+		max-w-[402px]
+		py-[7px]
+		px-2;
+		@screen s {
+			@apply
+				py-[10px]
+				px-[12px]
+				rounded-[20px]
+		}
+		@screen lg {
+			@apply
+				py-[17px]
+				px-4
+				rounded-[24px]
+		}
+		@screen xl {
+			@apply
+				py-[17px]
+				px-[12px]
+				rounded-[26px]
+		}
+}
+.carPrice__title{
+	@apply
+		mb-[2px]
+		text-[8px]
+		leading-3
+		text-center
+		font-bold;
+		@screen s {
+			@apply
+				mb-[4px]
+				text-[12px]
+		}
+		@screen wrap {
+			@apply
+				mb-[4px]
+				text-[14px]
+		}
+		@screen lg {
+			@apply
+				mb-[20px]
+				text-[16px]
+		}
+		@screen xl {
+			@apply
+				mb-[38px]
+				text-[20px]
+				leading-6
+		}
+}
+.carPrice__main{
+	@apply
+		flex
+		justify-between
+		items-center
+		bg-[#EFEEEE]
+		rounded-[8px]
+		pt-1
+		pb-[4px]
+		px-2
+		mb-[4px];
+		@screen s {
+			@apply
+				pt-1
+				pb-[4px]
+				px-2
+				mb-[4px]
+				rounded-[8px]
+		}
+		@screen xl {
+			@apply
+				pt-3
+				pb-[19px]
+				px-4
+				mb-[9px]
+				rounded-[16px]
+		}
+}
+.carPrice__scheme{
+}
+.carPrice__total{
+	@apply
+		text-[8px]
+		font-bold;
+		@screen s {
+			@apply
+				text-[12px]
+				mb-[1px]
+		}
+		@screen lg {
+			@apply
+				text-[16px]
+				mb-[2px]
+		}
+		@screen xl {
+			@apply
+				text-[24px]
+				leading-[29px]
+				mb-[10px]
+		}
+}
+.carPrice__days{
+	@apply
+		text-[8px]
+		opacity-80;
+		@screen s {
+			@apply
+				text-[11px]
+		}
+		@screen lg {
+			@apply
+				text-[14px]
+		}
+		@screen xl {
+			@apply
+				text-[14px]
+				leading-[17px]
+		}
+}
+.carPrice__arrowDown{
+	@apply
+		mr-[2px]
+		w-[6px]
+		h-[3px];
+		@screen s {
+			@apply
+				mr-[2px]
+				w-[12px]
+				h-[6px]
+		}
+		@screen lg {
+			@apply
+				mr-[4px]
+				w-[14px]
+				h-[7px]
+		}
+		@screen xl {
+			@apply
+				mr-[9px]
+				w-[17.5px]
+				h-[9.5px]
+		}
+}
+.carBtn{
+	@apply
+		flex
+		justify-center
+		items-center
+		w-[100%]
+		max-h-[55px]
+		px-1
+		bg-my-yellow
+		rounded-[4px]
+		text-[10px]
+		mt-2;
+		@screen s {
+			@apply
+				h-[25px]
+				text-[12px]
+				leading-[24px]
+				rounded-[8px]
+		}
+		@screen wrap {
+			@apply
+				h-[30px]
+				text-[14px]
+		}
+		@screen lg {
+			@apply
+				h-[40px]
+				text-[20px]
+		}
+		@screen xl {
+			@apply
+				w-[378px]
+				h-[55px]
+				leading-[24px]
+				rounded-[16px]
+		}
+}
+
+//////////////////////
+
+
+.main{
+	@apply
+		pt-1
+		pr-3;
+		@screen s {
+			@apply
+				pt-[10px]
+		}
+		@screen lg {
+			@apply
+				pt-[18px]
+		}
+		@screen xl {
+			@apply
+				pt-5
+				pr-5
+		}
+}
+.mainImageWrap{
+	@apply
+		relative
+		max-w-[210px]
+		mb-[8px];
+		@screen s {
+			@apply
+				max-w-[320px]
+				mb-[10px]
+		}
+		@screen wrap {
+			@apply
+				max-w-[400px]
+				mb-[10px]
+		}
+		@screen lg {
+			@apply
+				max-w-[500px]
+				mb-[12px]
+		}
+		@screen xl {
+			@apply
+				max-w-[824px]
+				mb-[15px]
+		}
+}
+.mainImage{
+	@apply
+		rounded-[12px];
+		@screen wrap {
+			@apply
+				rounded-[16px]
+		}
+		@screen xl {
+			@apply
+				rounded-20px
+		}
+}
+.carsWrap{
+	@apply
+		flex
+		justify-center
+		mt-2;
+		@screen wrap {
+			@apply
+				absolute
+				bottom-[11px]
+				left-[14px]
+				mt-3
+		}
+		@screen xl {
+			@apply
+				absolute
+				bottom-[11px]
+				left-[14px]
+				mt-3
+		}
+}
+.carWrap{
+	@apply
+		[&:not(:last-child)]:mr-[6px]
+		max-w-[123px];
+		@screen xl {
+			@apply
+				[&:not(:last-child)]:mr-[10px]
+		}
+}
+.car{
+	@apply
+		hover:shadow-[0px_0px_15px_0px_rgba(253,224,0,1)]
+		rounded-[12px]
+		max-w-[50px];
+		@screen lg {
+			@apply
+			max-w-[80px]
+			rounded-[14px]
+		}
+		@screen xl {
+			@apply
+			max-w-[100%]
+			rounded-20px
+		}
+}
+
+///////
+
+.mainInfo{
+	@apply
+		bg-white
+		shadow-[28px_28px_50px_0px_rgba(13,39,80,0.16)]
+		rounded-[12px]
+		pt-[5px]
+		pb-[3px]
+		pr-[10px]
+		pl-[15px]
+		max-w-[210px];
+		@screen s {
+			@apply
+				max-w-[320px]
+		}
+		@screen wrap {
+			@apply
+				max-w-[400px]
+		}
+		@screen lg {
+			@apply
+				max-w-[500px]
+				pt-[10px]
+				pb-[8px]
+				pr-[14px]
+				pl-[20px]
+		}
+		@screen xl {
+			@apply
+				rounded-[26px]
+				pt-[15px]
+				pb-[12px]
+				pr-[20px]
+				pl-[34px]
+				max-w-full
+		}
+}
+.mainAbout{
+	@apply
+		flex
+		justify-between
+		relative
+		before:absolute
+		before:bottom-0
+		before:left-0
+		before:w-full
+		before:h-[1px]
+		before:bg-[#000000]
+		before:bg-opacity-[.35]
+		pb-[4px];
+		@screen lg {
+			@apply
+				pb-[14px]
+				mb-4
+		}
+		@screen xl {
+			@apply
+				pb-[18px]
+		}
+}
+.mainLocation{
+	@apply
+	mr-2
+}
+.mainTitle{
+	@apply
+		text-[10px];
+		@screen s {
+			@apply
+				mb-[1px]
+				text-[12px]
+				leading-[24px]
+		}
+		@screen wrap {
+			@apply
+				mb-[20px]
+				text-[16px]
+		}
+		@screen lg {
+			@apply
+				mb-[24px]
+				text-[18px]
+		}
+		@screen xl {
+			@apply
+				mb-[34px]
+				text-[20px]
+				leading-[24px]
+		}
+}
+.mainAdress{
+	@apply
+	flex
+	text-[8px]
+	text-[#47B1FE]
+	max-w-[100px];
+	@screen s {
+		@apply
+			text-[10px]
+			max-w-full
+	}
+	@screen wrap {
+		@apply
+			text-[12px]
+	}
+	@screen lg {
+		@apply
+			text-[14px]
+	}
+	@screen xl {
+		@apply
+			text-[20px]
+			leading-[24px]
+			/* max-w-full */
+	}
+}
+.mainAdressIcon{
+	@apply
+		mr-[6px]
+		w-[11px];
+		@screen lg {
+			@apply
+				mr-[10px]
+				w-[18px]
+		}
+		@screen xl {
+			@apply
+				mr-[12.5px]
+				w-[20px]
+		}
+}
+.mainShedule{
+	@apply
+		flex
+		flex-col
+		text-[8px];
+		@screen s {
+			@apply
+				text-[9px]
+		}
+		@screen wrap {
+			@apply
+				text-[12px]
+		}
+		@screen lg {
+			@apply
+				text-[14px]
+		}
+		@screen xl {
+			@apply
+				text-[20px]
+				leading-[24px]
+		}
+}
+.mainSheduleTitle{
+	@apply
+		text-[10px]
+		text-right;
+		@screen s {
+			@apply
+				text-[12px]
+				mb-[1px]
+		}
+		@screen wrap {
+			@apply
+				mb-[20px]
+				text-[16px]
+		}
+		@screen lg {
+			@apply
+				mb-[24px]
+				text-[18px]
+		}
+		@screen xl {
+			@apply
+				text-[20px]
+				mb-[34px]
+		}
+}
+.mainSheduleItem{
+}
+.mainSheduleWeekdays{
+	@apply
+		flex
+		items-center
+}
+.mainSheduleIcon{
+	@apply
+		mr-[6px]
+		w-[11px];
+		@screen lg {
+			@apply
+				mr-2
+				w-[16px]
+		}
+		@screen xl {
+			@apply
+				mr-3
+				w-[18px]
+		}
+}
+.mainSheduleText{
+	@apply
+		text-right;
+}
+.mainSheduleWeekends{
+	@apply
+		text-right
+}
+
+////////////
+
+.mainTel{
+	@apply
+		relative
+		flex
+		justify-between
+		before:absolute
+		before:bottom-0
+		before:left-0
+		before:w-full
+		before:h-[1px]
+		before:bg-[#000000]
+		before:bg-opacity-[.35]
+		pb-[4px];
+		@screen wrap {
+			@apply
+				block
+		}
+		@screen lg {
+			@apply
+				pb-[14px]
+				mb-4
+		}
+		@screen xl {
+			@apply
+				pb-[18px]
+		}
+}
+.mainTelTitle{
+	@apply
+		text-[10px];
+		@screen s {
+			@apply
+				pb-[4px]
+				text-[12px]
+		}
+		@screen wrap {
+			@apply
+				text-[16px]
+		}
+		@screen lg {
+			@apply
+				text-[18px]
+				mb-[24px]
+		}
+		@screen xl {
+			@apply
+				mt-5
+				mb-[34px]
+				pb-[4px]
+				text-[20px]
+				leading-[24px]
+		}
+	}
+.tel{
+	@apply
+		text-[10px];
+		@screen s {
+			@apply
+			text-[12px]
+		}
+		@screen wrap {
+			@apply
+			text-[16px]
+		}
+		@screen lg {
+			@apply
+			text-[18px]
+		}
+		@screen xl {
+			@apply
+			text-[20px]
+			leading-[24px]
+		}
+}
+.aboutPark{
+	@apply
+		flex
+		items-center
+		justify-between
+		relative
+		before:absolute
+		before:bottom-0
+		before:left-0
+		before:w-full
+		before:h-[1px]
+		before:bg-[#000000]
+		before:bg-opacity-[.35]
+		pb-[4px]
+		mb-1;
+		@screen wrap {
+			@apply
+				mb-2
+		}
+		@screen xl {
+			@apply
+				pb-[18px]
+				mb-3
+		}
+}
+.arrowDown{
+	@apply
+		mr-[2px]
+		w-[9px]
+		h-[3px];
+		@screen s {
+			@apply
+				w-[10px]
+				h-[5px]
+		}
+		@screen wrap {
+			@apply
+				mr-[6px]
+				w-[12px]
+				h-[6px]
+		}
+		@screen lg {
+			@apply
+				mr-[6px]
+				w-[14px]
+				h-[7px]
+		}
+		@screen xl {
+			@apply
+				mr-[9px]
+				w-[17.5px]
+				h-[9.5px]
+		}
+}
+.mainParkTitle{
+	@apply
+		text-[10px];
+		@screen s {
+			@apply
+				text-[12px]
+		}
+		@screen wrap {
+			@apply
+				text-[16px]
+		}
+		@screen lg {
+			@apply
+				text-[18px]
+		}
+		@screen xl {
+			@apply
+				text-[20px]
+				leading-[24px]
+		}
+}
+
+/////
+
+.seeSimilarWrap{
+	@apply
+		flex
+		justify-end
+}
+.seeSimilar{
+	@apply
+		bg-my-yellow
+		rounded-[4px]
+		max-w-[120px]
+		max-h-[15px]
+		text-[10px]
+		mb-1
+		px-2;
+		@screen s {
+			@apply
+				rounded-[8px]
+				max-w-[255px]
+				max-h-[41px]
+				text-[12px]
+				px-[24px]
+				py-[2px]
+		}
+		@screen wrap {
+			@apply
+				mb-2
+				text-[14px]
+				px-[24px]
+				py-[2px]
+		}
+		@screen lg {
+			@apply
+				rounded-lg
+				text-[18px]
+				leading-[24px]
+				px-[39px]
+				py-[10px]
+		}
+}
+
+
+
